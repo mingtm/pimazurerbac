@@ -8,15 +8,13 @@
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get roleAssignment](../api/roleassignment_get.md) | [roleAssignment](roleassignment.md) |Read properties and relationships of roleAssignment object.|
-|[Update](../api/roleassignment_update.md) | [roleAssignment](roleassignment.md)	|Update roleAssignment object. |
-|[Delete](../api/roleassignment_delete.md) | None |Delete roleAssignment object. |
-|[Getmyassignments](../api/roleassignment_getmyassignments.md)|[roleAssignment](roleassignment.md) collection||
+|[getMyAssignments](../api/roleassignment_getmyassignments.md)|[roleAssignment](roleassignment.md) collection||
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|activationRequired|Boolean||
-|assigned|Boolean||
+|activationRequired|Boolean|If activation is required for the role assignment.|
+|assigned|Boolean|Is the role assigned.|
 |assignmentExpirationDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |assignmentStartDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |assignmentType|String||
@@ -24,11 +22,11 @@
 |eligibilityExpirationDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |eligibilityStartDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |id|String| Read-only.|
-|inherited|Boolean||
-|isAssignmentPermanent|Boolean||
-|isEligibilityPermanent|Boolean||
-|name|String||
-|originId|String||
+|inherited|Boolean|Is the role assignment inherited.|
+|isAssignmentPermanent|Boolean|Is the assignment permanent.|
+|isEligibilityPermanent|Boolean|Is the eligible assignment permanent.|
+|name|String|Name of the role assignment.|
+|originId|String|The original id of the role assignment managed by the resource provider.|
 
 ### Relationships
 | Relationship | Type	|Description|

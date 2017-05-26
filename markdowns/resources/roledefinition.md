@@ -8,19 +8,14 @@
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get roleDefinition](../api/roledefinition_get.md) | [roleDefinition](roledefinition.md) |Read properties and relationships of roleDefinition object.|
-|[Create roleAssignmentRequest](../api/roledefinition_post_roleassignmentrequests.md) |[roleAssignmentRequest](roleassignmentrequest.md)| Create a new roleAssignmentRequest by posting to the roleAssignmentRequests collection.|
-|[List roleAssignmentRequests](../api/roledefinition_list_roleassignmentrequests.md) |[roleAssignmentRequest](roleassignmentrequest.md) collection| Get a roleAssignmentRequest object collection.|
-|[Create roleAssignment](../api/roledefinition_post_roleassignments.md) |[roleAssignment](roleassignment.md)| Create a new roleAssignment by posting to the roleAssignments collection.|
-|[List roleAssignments](../api/roledefinition_list_roleassignments.md) |[roleAssignment](roleassignment.md) collection| Get a roleAssignment object collection.|
-|[Update](../api/roledefinition_update.md) | [roleDefinition](roledefinition.md)	|Update roleDefinition object. |
-|[Delete](../api/roledefinition_delete.md) | None |Delete roleDefinition object. |
+
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|activationRequiredCount|Int32||
-|assignedCount|Int32||
-|displayName|String||
+|activationRequiredCount|Int32|Count of the role assignments for the given roleDefinition which require role activation.|
+|assignedCount|Int32|Count of the role assignments whose  ```assigned``` properties are true for the given roleDefinition. |
+|displayName|String|Role definition display name.|
 |id|String| Read-only.|
 |ruleSettings|[rulesetting](rulesetting.md) collection||
 |subjectCount|Int32||

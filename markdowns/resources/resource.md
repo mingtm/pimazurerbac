@@ -1,4 +1,4 @@
-# resource resource type
+# resource type
 
 
 
@@ -8,33 +8,28 @@
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get resource](../api/resource_get.md) | [resource](resource.md) |Read properties and relationships of resource object.|
-|[Create alert](../api/resource_post_alerts.md) |[alert](alert.md)| Create a new alert by posting to the alerts collection.|
 |[List alerts](../api/resource_list_alerts.md) |[alert](alert.md) collection| Get a alert object collection.|
-|[Create roleAssignment](../api/resource_post_roleassignments.md) |[roleAssignment](roleassignment.md)| Create a new roleAssignment by posting to the roleAssignments collection.|
 |[List roleAssignments](../api/resource_list_roleassignments.md) |[roleAssignment](roleassignment.md) collection| Get a roleAssignment object collection.|
-|[Create roleDefinition](../api/resource_post_roledefinitions.md) |[roleDefinition](roledefinition.md)| Create a new roleDefinition by posting to the roleDefinitions collection.|
 |[List roleDefinitions](../api/resource_list_roledefinitions.md) |[roleDefinition](roledefinition.md) collection| Get a roleDefinition object collection.|
-|[Update](../api/resource_update.md) | [resource](resource.md)	|Update resource object. |
-|[Delete](../api/resource_delete.md) | None |Delete resource object. |
 |[Accesslevel](../api/resource_accesslevel.md)|String||
 |[Activities](../api/resource_activities.md)|[resource](resource.md) collection||
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|displayName|String||
-|id|String| Read-only.|
-|originalId|String||
-|resourceType|String||
-|roleAssignmentCount|Int32||
-|roleDefinitionCount|Int32||
+|displayName|String|Resource display name.|
+|id|String| Read-only. Resource unique id.|
+|originalId|String|Resource original id.|
+|resourceType|String|Resource type.|
+|roleAssignmentCount|Int32|Count of role assignments for the given resource.|
+|roleDefinitionCount|Int32|Count of role definitions for the give resource.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |alerts|[alert](alert.md) collection| Read-only. Nullable.|
 |parent|[resource](resource.md)| Read-only. Nullable.|
-|provider|[provider](provider.md)| Read-only. Nullable.|
+|provider|[provider](provider.md)| Read-only. |
 |roleAssignments|[roleAssignment](roleassignment.md) collection| Read-only. Nullable.|
 |roleDefinitions|[roleDefinition](roledefinition.md) collection| Read-only. Nullable.|
 
