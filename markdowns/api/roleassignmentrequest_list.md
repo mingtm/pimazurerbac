@@ -42,7 +42,7 @@ Here is an example of the response. Note: The response object shown here may be 
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 271
+Content-length: 279
 
 {
   "value": [
@@ -50,8 +50,8 @@ Content-length: 271
       "id": "id-value",
       "assignmentLevel": "assignmentLevel-value",
       "requestType": "requestType-value",
-      "requestedDate": "datetime-value",
-      "roleAssignmentStartDate": "datetime-value",
+      "requestedDateTime": "datetime-value",
+      "roleAssignmentStartDateTime": "datetime-value",
       "status": "status-value"
     }
   ]

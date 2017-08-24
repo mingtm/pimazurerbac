@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 GET /roleDefinitions/<id>
 GET /policies/<id>/roleDefinitions/<id>
-GET /roleAssignments/<id>/roleDefinition
+GET /providers/<id>/roleDefinitions/<id>
 ```
 ### Optional query parameters
 This method supports the [OData Query Parameters](http://graph.microsoft.io/docs/overview/query_parameters) to help customize the response.

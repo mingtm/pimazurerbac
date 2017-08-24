@@ -24,7 +24,7 @@ In the request body, supply the values for relevant fields that should be update
 |additionalData|KeyValueList||
 |alertDescription|String||
 |alertName|String||
-|alertType|AlertType||
+|alertType|String||
 |howToPrevent|String||
 |isActive|Boolean||
 |isConfigurable|Boolean||
@@ -37,8 +37,8 @@ In the request body, supply the values for relevant fields that should be update
 |resourceId|String||
 |securityImpact|String||
 |settings|KeyValue||
-|severityLevel|AlertSeverity||
-|status|AlertStatus||
+|severityLevel|String||
+|status|String||
 
 ### Response
 If successful, this method returns a `200 OK` response code and updated [alert](../resources/alert.md) object in the response body.
@@ -52,7 +52,7 @@ Here is an example of the request.
 ```http
 PATCH https://graph.microsoft.com/beta/providers('00000000-0000-0000-0000-000000000002')/alerts/<id>
 Content-type: application/json
-Content-length: 190
+Content-length: 297
 
 {
   "resourceId": "resourceId-value",
@@ -61,6 +61,12 @@ Content-length: 190
   "numberOfAffectedItems": 99,
   "additionalData": [
     {
+      "item": [
+        {
+          "key": "key-value",
+          "value": "value-value"
+        }
+      ]
     }
   ]
 }
@@ -75,7 +81,7 @@ Here is an example of the response. Note: The response object shown here may be 
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 210
+Content-length: 317
 
 {
   "id": "id-value",
@@ -85,6 +91,12 @@ Content-length: 210
   "numberOfAffectedItems": 99,
   "additionalData": [
     {
+      "item": [
+        {
+          "key": "key-value",
+          "value": "value-value"
+        }
+      ]
     }
   ]
 }

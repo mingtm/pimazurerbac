@@ -10,12 +10,12 @@
 |[Get alert](../api/alert_get.md) | [alert](alert.md) |Read properties and relationships of alert object.|
 |[Update](../api/alert_update.md) | [alert](alert.md)	|Update alert object. |
 |[Delete](../api/alert_delete.md) | None |Delete alert object. |
-|[Deactivate](../api/alert_deactivate.md)|[resource](resource.md) collection||
-|[Disable](../api/alert_disable.md)|[resource](resource.md) collection||
-|[Enable](../api/alert_enable.md)|[resource](resource.md) collection||
-|[Fix](../api/alert_fix.md)|[resource](resource.md) collection||
-|[Refresh](../api/alert_refresh.md)|[resource](resource.md) collection||
-|[Refresh](../api/alert_refresh.md)|[resource](resource.md) collection||
+|[Deactivate](../api/alert_deactivate.md)|None||
+|[Disable](../api/alert_disable.md)|None||
+|[Enable](../api/alert_enable.md)|None||
+|[Fix](../api/alert_fix.md)|None||
+|[Refresh](../api/alert_refresh.md)|None||
+|[Refresh](../api/alert_refresh.md)|None||
 
 ### Properties
 | Property	   | Type	|Description|
@@ -23,7 +23,7 @@
 |additionalData|[KeyValueList](keyvaluelist.md) collection||
 |alertDescription|String||
 |alertName|String||
-|alertType|[AlertType](alerttype.md)||
+|alertType|String||
 |howToPrevent|String||
 |id|String| Read-only.|
 |isActive|Boolean||
@@ -37,8 +37,8 @@
 |resourceId|String||
 |securityImpact|String||
 |settings|[KeyValue](keyvalue.md) collection||
-|severityLevel|[AlertSeverity](alertseverity.md)||
-|status|[AlertStatus](alertstatus.md)||
+|severityLevel|String||
+|status|String||
 
 ### Relationships
 None
@@ -61,7 +61,7 @@ Here is a JSON representation of the resource.
   "additionalData": [{"@odata.type": "microsoft.graph.KeyValueList"}],
   "alertDescription": "String",
   "alertName": "String",
-  "alertType": {"@odata.type": "microsoft.graph.AlertType"},
+  "alertType": "String",
   "howToPrevent": "String",
   "id": "String (identifier)",
   "isActive": true,
@@ -75,8 +75,8 @@ Here is a JSON representation of the resource.
   "resourceId": "String",
   "securityImpact": "String",
   "settings": [{"@odata.type": "microsoft.graph.KeyValue"}],
-  "severityLevel": {"@odata.type": "microsoft.graph.AlertSeverity"},
-  "status": {"@odata.type": "microsoft.graph.AlertStatus"}
+  "severityLevel": "String",
+  "status": "String"
 }
 
 ```

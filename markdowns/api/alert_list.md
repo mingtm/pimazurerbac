@@ -42,7 +42,7 @@ Here is an example of the response. Note: The response object shown here may be 
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 275
+Content-length: 406
 
 {
   "value": [
@@ -54,6 +54,12 @@ Content-length: 275
       "numberOfAffectedItems": 99,
       "additionalData": [
         {
+          "item": [
+            {
+              "key": "key-value",
+              "value": "value-value"
+            }
+          ]
         }
       ]
     }

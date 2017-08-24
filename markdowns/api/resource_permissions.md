@@ -1,4 +1,4 @@
-# resource: accessLevel
+# resource: permissions
 
 
 ### Prerequisites
@@ -6,9 +6,9 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /resources/<id>/accessLevel
-POST /policies/<id>/resource/accessLevel
-POST /activities/<id>/resource/accessLevel
+POST /resources/<id>/permissions
+POST /policies/<id>/resource/permissions
+POST /roleDefinitions/<id>/resource/permissions
 
 ```
 ### Request headers
@@ -20,7 +20,7 @@ POST /activities/<id>/resource/accessLevel
 ### Request body
 
 ### Response
-If successful, this method returns `200, OK` response code and String object in the response body.
+If successful, this method returns `200, OK` response code and [permission](../resources/permission.md) collection object in the response body.
 
 ### Example
 Here is an example of how to call this API.
@@ -28,10 +28,10 @@ Here is an example of how to call this API.
 Here is an example of the request.
 <!-- {
   "blockType": "request",
-  "name": "resource_accesslevel"
+  "name": "resource_permissions"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/providers('00000000-0000-0000-0000-000000000002')/resources/<id>/accessLevel
+POST https://graph.microsoft.com/beta/providers('00000000-0000-0000-0000-000000000002')/resources/<id>/permissions
 ```
 
 ##### Response
@@ -39,15 +39,22 @@ Here is an example of the response. Note: The response object shown here may be 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "String"
+  "@odata.type": "microsoft.graph.permission",
+  "isCollection": true
 } -->
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 29
+Content-length: 123
 
 {
-  "value": "String-value"
+  "value": [
+    {
+      "accessLevel": "accessLevel-value",
+      "isActive": true,
+      "isEligible": true
+    }
+  ]
 }
 ```
 
@@ -55,7 +62,7 @@ Content-length: 29
 2015-10-25 14:57:30 UTC -->
 <!-- {
   "type": "#page.annotation",
-  "description": "resource: accessLevel",
+  "description": "resource: permissions",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

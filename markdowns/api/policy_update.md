@@ -8,7 +8,6 @@ The following **scopes** are required to execute this API:
 ```http
 PATCH /policies/<id>
 PATCH /providers/<id>/policies/<id>
-PATCH /resources/<id>/provider/policies/<id>
 ```
 ### Optional request headers
 | Name       | Description|

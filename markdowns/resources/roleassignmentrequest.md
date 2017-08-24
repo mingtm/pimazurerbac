@@ -20,11 +20,12 @@
 |id|String| Read-only.|
 |reason|String||
 |requestType|String||
-|requestedDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|roleAssignmentStartDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|requestedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|roleAssignmentStartDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |schedule|[schedule](schedule.md)||
 |status|String||
 |statusDetail|[KeyValue](keyvalue.md) collection||
+|targetLinkedRoleAssignmentId|String||
 
 ### Relationships
 | Relationship | Type	|Description|
@@ -51,11 +52,12 @@ Here is a JSON representation of the resource.
   "id": "String (identifier)",
   "reason": "String",
   "requestType": "String",
-  "requestedDate": "String (timestamp)",
-  "roleAssignmentStartDate": "String (timestamp)",
+  "requestedDateTime": "String (timestamp)",
+  "roleAssignmentStartDateTime": "String (timestamp)",
   "schedule": {"@odata.type": "microsoft.graph.schedule"},
   "status": "String",
-  "statusDetail": [{"@odata.type": "microsoft.graph.KeyValue"}]
+  "statusDetail": [{"@odata.type": "microsoft.graph.KeyValue"}],
+  "targetLinkedRoleAssignmentId": "String"
 }
 
 ```

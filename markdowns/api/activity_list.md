@@ -42,17 +42,17 @@ Here is an example of the response. Note: The response object shown here may be 
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 251
+Content-length: 276
 
 {
   "value": [
     {
       "id": "id-value",
-      "partitionId": "partitionId-value",
       "correlationId": "correlationId-value",
-      "createTime": "datetime-value",
-      "expirationTime": "datetime-value",
-      "type": "type-value"
+      "createdDateTime": "datetime-value",
+      "expirationDateTime": "datetime-value",
+      "operationType": "operationType-value",
+      "resourceId": "resourceId-value"
     }
   ]
 }

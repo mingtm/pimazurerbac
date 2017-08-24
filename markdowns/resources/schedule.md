@@ -7,10 +7,10 @@
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
 |details|String||
-|durationInMinutes|Int32||
+|duration|Duration||
 |isPermanent|Boolean||
-|startDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|stopDate|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|startDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|stopDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
 |type|String||
 
 ### JSON representation
@@ -28,10 +28,10 @@ Here is a JSON representation of the resource.
 ```json
 {
   "details": "String",
-  "durationInMinutes": 1024,
+  "duration": "String (timestamp)",
   "isPermanent": true,
-  "startDate": "String (timestamp)",
-  "stopDate": "String (timestamp)",
+  "startDateTime": "String (timestamp)",
+  "stopDateTime": "String (timestamp)",
   "type": "String"
 }
 

@@ -42,17 +42,17 @@ Here is an example of the response. Note: The response object shown here may be 
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 258
+Content-length: 235
 
 {
   "value": [
     {
       "id": "id-value",
       "originId": "originId-value",
-      "name": "name-value",
-      "isEligibilityPermanent": true,
-      "eligibilityExpirationDate": "datetime-value",
-      "eligibilityStartDate": "datetime-value"
+      "isPermanent": true,
+      "expirationDateTime": "datetime-value",
+      "startDateTime": "datetime-value",
+      "level": "level-value"
     }
   ]
 }

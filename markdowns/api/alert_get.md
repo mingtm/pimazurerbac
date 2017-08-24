@@ -43,7 +43,7 @@ Here is an example of the response. Note: The response object shown here may be 
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 210
+Content-length: 317
 
 {
   "id": "id-value",
@@ -53,6 +53,12 @@ Content-length: 210
   "numberOfAffectedItems": 99,
   "additionalData": [
     {
+      "item": [
+        {
+          "key": "key-value",
+          "value": "value-value"
+        }
+      ]
     }
   ]
 }

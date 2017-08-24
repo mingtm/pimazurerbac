@@ -8,7 +8,6 @@ The following **scopes** are required to execute this API:
 ```http
 POST /roleAssignmentRequests/<id>/cancel
 POST /providers/<id>/roleAssignmentRequests/<id>/cancel
-POST /roleDefinitions/<id>/roleAssignmentRequests/<id>/cancel
 
 ```
 ### Request headers

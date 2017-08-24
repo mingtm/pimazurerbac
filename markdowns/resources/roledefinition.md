@@ -8,14 +8,15 @@
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get roleDefinition](../api/roledefinition_get.md) | [roleDefinition](roledefinition.md) |Read properties and relationships of roleDefinition object.|
-
+|[Update](../api/roledefinition_update.md) | [roleDefinition](roledefinition.md)	|Update roleDefinition object. |
+|[Delete](../api/roledefinition_delete.md) | None |Delete roleDefinition object. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|activationRequiredCount|Int32|Count of the role assignments for the given roleDefinition which require role activation.|
-|assignedCount|Int32|Count of the role assignments whose  ```assigned``` properties are true for the given roleDefinition. |
-|displayName|String|Role definition display name.|
+|activationRequiredCount|Int32||
+|assignedCount|Int32||
+|displayName|String||
 |id|String| Read-only.|
 |ruleSettings|[rulesetting](rulesetting.md) collection||
 |subjectCount|Int32||
@@ -25,8 +26,6 @@
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |resource|[resource](resource.md)| Read-only. Nullable.|
-|roleAssignmentRequests|[roleAssignmentRequest](roleassignmentrequest.md) collection| Read-only. Nullable.|
-|roleAssignments|[roleAssignment](roleassignment.md) collection| Read-only. Nullable.|
 
 ### JSON representation
 

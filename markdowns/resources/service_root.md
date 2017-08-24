@@ -9,8 +9,6 @@
 |[List activity](../api/activity_list.md) | [activity](activity.md) collection |Get activity object collection. |
 |[Create alert](../api/alert_post_alerts.md) |[alert](alert.md)| Create a new alert by posting to the alerts collection.|
 |[List alert](../api/alert_list.md) | [alert](alert.md) collection |Get alert object collection. |
-|[Create assignee](../api/assignee_post_assignees.md) |[assignee](assignee.md)| Create a new assignee by posting to the assignees collection.|
-|[List assignee](../api/assignee_list.md) | [assignee](assignee.md) collection |Get assignee object collection. |
 |[Create policy](../api/policy_post_policies.md) |[policy](policy.md)| Create a new policy by posting to the policies collection.|
 |[List policy](../api/policy_list.md) | [policy](policy.md) collection |Get policy object collection. |
 |[Create provider](../api/provider_post_providers.md) |[provider](provider.md)| Create a new provider by posting to the providers collection.|

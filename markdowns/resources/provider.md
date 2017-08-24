@@ -8,6 +8,8 @@
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get provider](../api/provider_get.md) | [provider](provider.md) |Read properties and relationships of provider object.|
+|[Create activity](../api/provider_post_activities.md) |[activity](activity.md)| Create a new activity by posting to the activities collection.|
+|[List activities](../api/provider_list_activities.md) |[activity](activity.md) collection| Get a activity object collection.|
 |[Create alert](../api/provider_post_alerts.md) |[alert](alert.md)| Create a new alert by posting to the alerts collection.|
 |[List alerts](../api/provider_list_alerts.md) |[alert](alert.md) collection| Get a alert object collection.|
 |[Create policy](../api/provider_post_policies.md) |[policy](policy.md)| Create a new policy by posting to the policies collection.|
@@ -36,6 +38,7 @@
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
+|activities|[activity](activity.md) collection| Read-only. Nullable.|
 |addRoleAssignmentConnection|[providerConnection](providerconnection.md)| Read-only. Nullable.|
 |alerts|[alert](alert.md) collection| Read-only. Nullable.|
 |getResourceConnection|[providerConnection](providerconnection.md)| Read-only. Nullable.|

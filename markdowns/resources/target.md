@@ -16,6 +16,7 @@
 |:---------------|:--------|:----------|
 |displayName|String||
 |id|String| Read-only.|
+|internalType|String||
 |objectType|String||
 |uniqueName|String||
 
@@ -39,6 +40,7 @@ Here is a JSON representation of the resource.
 {
   "displayName": "String",
   "id": "String (identifier)",
+  "internalType": "String",
   "objectType": "String",
   "uniqueName": "String"
 }

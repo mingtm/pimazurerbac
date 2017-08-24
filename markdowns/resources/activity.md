@@ -1,7 +1,5 @@
 # activity resource type
-
-
-
+Represents an auditing activity object that is created to track the role management operations, such as an administrator did a role assignment, a user activated his role, a role setting was changed, etc. 
 
 ### Methods
 
@@ -10,26 +8,25 @@
 |[Get activity](../api/activity_get.md) | [activity](activity.md) |Read properties and relationships of activity object.|
 |[Update](../api/activity_update.md) | [activity](activity.md)	|Update activity object. |
 |[Delete](../api/activity_delete.md) | None |Delete activity object. |
+|[My](../api/activity_my.md)|[activity](activity.md) collection||
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|correlationId|Guid||
-|createTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|expirationTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|id|Guid| Read-only.|
-|partitionId|String||
+|correlationId|String||
+|createdDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|expirationDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|id|String| Read-only.|
+|operationType|String||
 |reason|String||
-|sourceType|[SourceType](sourcetype.md)||
+|resourceId|String||
 |status|String||
-|type|String||
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |originalRequestor|[subject](subject.md)| Read-only. Nullable.|
 |requestor|[subject](subject.md)| Read-only. Nullable.|
-|resource|[resource](resource.md)| Read-only. Nullable.|
 |subject|[subject](subject.md)| Read-only. Nullable.|
 |target|[target](target.md)| Read-only. Nullable.|
 
@@ -47,15 +44,14 @@ Here is a JSON representation of the resource.
 
 ```json
 {
-  "correlationId": "Guid",
-  "createTime": "String (timestamp)",
-  "expirationTime": "String (timestamp)",
-  "id": "Guid (identifier)",
-  "partitionId": "String",
+  "correlationId": "String",
+  "createdDateTime": "String (timestamp)",
+  "expirationDateTime": "String (timestamp)",
+  "id": "String (identifier)",
+  "operationType": "String",
   "reason": "String",
-  "sourceType": {"@odata.type": "microsoft.graph.SourceType"},
-  "status": "String",
-  "type": "String"
+  "resourceId": "String",
+  "status": "String"
 }
 
 ```

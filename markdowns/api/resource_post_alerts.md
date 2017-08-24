@@ -8,7 +8,7 @@ The following **scopes** are required to execute this API:
 ```http
 POST /resources/<id>/alerts
 POST /policies/<id>/resource/alerts
-POST /activities/<id>/resource/alerts
+POST /roleDefinitions/<id>/resource/alerts
 
 ```
 ### Request headers
@@ -34,7 +34,7 @@ Here is an example of the request.
 ```http
 POST https://graph.microsoft.com/beta/providers('00000000-0000-0000-0000-000000000002')/resources/<id>/alerts
 Content-type: application/json
-Content-length: 190
+Content-length: 297
 
 {
   "resourceId": "resourceId-value",
@@ -43,6 +43,12 @@ Content-length: 190
   "numberOfAffectedItems": 99,
   "additionalData": [
     {
+      "item": [
+        {
+          "key": "key-value",
+          "value": "value-value"
+        }
+      ]
     }
   ]
 }
@@ -58,7 +64,7 @@ Here is an example of the response. Note: The response object shown here may be 
 ```http
 HTTP/1.1 201 Created
 Content-type: application/json
-Content-length: 210
+Content-length: 317
 
 {
   "id": "id-value",
@@ -68,6 +74,12 @@ Content-length: 210
   "numberOfAffectedItems": 99,
   "additionalData": [
     {
+      "item": [
+        {
+          "key": "key-value",
+          "value": "value-value"
+        }
+      ]
     }
   ]
 }

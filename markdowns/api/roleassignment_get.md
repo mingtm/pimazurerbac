@@ -7,8 +7,8 @@ The following **scopes** are required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /roleAssignments/<id>
-GET /providers/<id>/roleAssignments/<id>
 GET /resources/<id>/roleAssignments/<id>
+GET /providers/<id>/roleAssignments/<id>
 ```
 ### Optional query parameters
 This method supports the [OData Query Parameters](http://graph.microsoft.io/docs/overview/query_parameters) to help customize the response.
@@ -43,15 +43,15 @@ Here is an example of the response. Note: The response object shown here may be 
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 205
+Content-length: 182
 
 {
   "id": "id-value",
   "originId": "originId-value",
-  "name": "name-value",
-  "isEligibilityPermanent": true,
-  "eligibilityExpirationDate": "datetime-value",
-  "eligibilityStartDate": "datetime-value"
+  "isPermanent": true,
+  "expirationDateTime": "datetime-value",
+  "startDateTime": "datetime-value",
+  "level": "level-value"
 }
 ```
 
