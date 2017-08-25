@@ -1,12 +1,12 @@
 # KeyValueList resource type
-
+The list of key-value pairs.
 
 
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|item|[KeyValue](keyvalue.md) collection||
+|item|[KeyValue](keyvalue.md) collection|The collection for key-value pairs.|
 
 ### JSON representation
 

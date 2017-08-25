@@ -8,6 +8,7 @@
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get roleAssignment](../api/roleassignment_get.md) | [roleAssignment](roleassignment.md) |Read properties and relationships of roleAssignment object.|
+|[Create roleAssignment](../api/resource_post_roleassignments.md) |[roleAssignment](roleassignment.md)| Create a new roleAssignment by posting to the roleAssignments collection.|
 |[Update](../api/roleassignment_update.md) | [roleAssignment](roleassignment.md)	|Update roleAssignment object. |
 |[Delete](../api/roleassignment_delete.md) | None |Delete roleAssignment object. |
 |[Getmyassignments](../api/roleassignment_getmyassignments.md)|[roleAssignment](roleassignment.md) collection||

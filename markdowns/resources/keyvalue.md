@@ -1,13 +1,13 @@
 # KeyValue resource type
-
+The key-value mapping object.
 
 
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|key|String||
-|value|String||
+|key|String|The key.|
+|value|String|The value.|
 
 ### JSON representation
 

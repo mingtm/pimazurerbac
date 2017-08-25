@@ -1,6 +1,6 @@
 # provider resource type
 
-
+Represents the resource provider that is managed by Privileged Identity Management (PIM). Currently Azure RBAC is the only provider onboarded to PIM. 
 
 
 ### Methods
@@ -8,52 +8,37 @@
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get provider](../api/provider_get.md) | [provider](provider.md) |Read properties and relationships of provider object.|
-|[Create activity](../api/provider_post_activities.md) |[activity](activity.md)| Create a new activity by posting to the activities collection.|
-|[List activities](../api/provider_list_activities.md) |[activity](activity.md) collection| Get a activity object collection.|
-|[Create alert](../api/provider_post_alerts.md) |[alert](alert.md)| Create a new alert by posting to the alerts collection.|
-|[List alerts](../api/provider_list_alerts.md) |[alert](alert.md) collection| Get a alert object collection.|
-|[Create policy](../api/provider_post_policies.md) |[policy](policy.md)| Create a new policy by posting to the policies collection.|
-|[List policies](../api/provider_list_policies.md) |[policy](policy.md) collection| Get a policy object collection.|
-|[Create resource](../api/provider_post_resources.md) |[resource](resource.md)| Create a new resource by posting to the resources collection.|
-|[List resources](../api/provider_list_resources.md) |[resource](resource.md) collection| Get a resource object collection.|
-|[Create roleAssignmentRequest](../api/provider_post_roleassignmentrequests.md) |[roleAssignmentRequest](roleassignmentrequest.md)| Create a new roleAssignmentRequest by posting to the roleAssignmentRequests collection.|
-|[List roleAssignmentRequests](../api/provider_list_roleassignmentrequests.md) |[roleAssignmentRequest](roleassignmentrequest.md) collection| Get a roleAssignmentRequest object collection.|
-|[Create roleAssignment](../api/provider_post_roleassignments.md) |[roleAssignment](roleassignment.md)| Create a new roleAssignment by posting to the roleAssignments collection.|
-|[List roleAssignments](../api/provider_list_roleassignments.md) |[roleAssignment](roleassignment.md) collection| Get a roleAssignment object collection.|
-|[Create roleDefinition](../api/provider_post_roledefinitions.md) |[roleDefinition](roledefinition.md)| Create a new roleDefinition by posting to the roleDefinitions collection.|
-|[List roleDefinitions](../api/provider_list_roledefinitions.md) |[roleDefinition](roledefinition.md) collection| Get a roleDefinition object collection.|
-|[Update](../api/provider_update.md) | [provider](provider.md)	|Update provider object. |
-|[Delete](../api/provider_delete.md) | None |Delete provider object. |
+|[Create provider](../api/provider_update.md) | [provider](provider.md)	|Create a new provider. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|displayName|String||
-|id|String| Read-only.|
-|isMultiTenant|Boolean||
-|ownerTemplateId|String||
-|readerTemplateId|String||
-|requiresResourceProvisioning|Boolean||
+|displayName|String|Provider display name.|
+|id|String| Provider id (in GUID format). Read-only.|
+|isMultiTenant|Boolean|Indicate if the provider supports multiple tenants. (Not used currently.) |
+|ownerTemplateId|String|The template id for owner read/write operations. (Not used currently.)|
+|readerTemplateId|String|The template id for read operations. (Not used currently.)|
+|requiresResourceProvisioning|Boolean|The provider requires resource provisioning.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|activities|[activity](activity.md) collection| Read-only. Nullable.|
-|addRoleAssignmentConnection|[providerConnection](providerconnection.md)| Read-only. Nullable.|
-|alerts|[alert](alert.md) collection| Read-only. Nullable.|
-|getResourceConnection|[providerConnection](providerconnection.md)| Read-only. Nullable.|
-|getResourcesConnection|[providerConnection](providerconnection.md)| Read-only. Nullable.|
-|getRoleAssignmentConnection|[providerConnection](providerconnection.md)| Read-only. Nullable.|
-|getRoleAssignmentsForResourceAndRoleDefinitionConnection|[providerConnection](providerconnection.md)| Read-only. Nullable.|
-|getRoleAssignmentsForResourceConnection|[providerConnection](providerconnection.md)| Read-only. Nullable.|
-|getRoleDefinitionConnection|[providerConnection](providerconnection.md)| Read-only. Nullable.|
-|getRoleDefinitionsConnection|[providerConnection](providerconnection.md)| Read-only. Nullable.|
-|policies|[policy](policy.md) collection| Read-only. Nullable.|
-|removeRoleAssignmentConnection|[providerConnection](providerconnection.md)| Read-only. Nullable.|
+|activities|[activity](activity.md) collection| TODO: Remove this from entity. |
+|addRoleAssignmentConnection|[providerConnection](providerconnection.md)|The external provider connection to add role assignment. Read-only. Nullable.|
+|alerts|[alert](alert.md) collection| TODO: Remove this navigation.|
+|getResourceConnection|[providerConnection](providerconnection.md)|The external provider connection to get resource. Read-only. Nullable.|
+|getResourcesConnection|[providerConnection](providerconnection.md)| The external provider connection to list resources. Read-only. Nullable.|
+|getRoleAssignmentConnection|[providerConnection](providerconnection.md)| The external provider connection to get a role assignment. Read-only. Nullable.|
+|getRoleAssignmentsForResourceAndRoleDefinitionConnection|[providerConnection](providerconnection.md)| The external provider connection to get role assignments with the given resource and role definition. Read-only. Nullable.|
+|getRoleAssignmentsForResourceConnection|[providerConnection](providerconnection.md)| The external provider connection to get role assignments for a given resource. Read-only. Nullable.|
+|getRoleDefinitionConnection|[providerConnection](providerconnection.md)| The external provider connection to get a role definition. Read-only. Nullable.|
+|getRoleDefinitionsConnection|[providerConnection](providerconnection.md)| The external provider connection to list role definitions. Read-only. Nullable.|
+|policies|[policy](policy.md) collection|TODO: Remove this from entity.|
+|removeRoleAssignmentConnection|[providerConnection](providerconnection.md)| The external provider connection to remove a role assignment. Read-only. Nullable.|
 |resources|[resource](resource.md) collection| Read-only. Nullable.|
-|roleAssignmentRequests|[roleAssignmentRequest](roleassignmentrequest.md) collection| Read-only. Nullable.|
-|roleAssignments|[roleAssignment](roleassignment.md) collection| Read-only. Nullable.|
-|roleDefinitions|[roleDefinition](roledefinition.md) collection| Read-only. Nullable.|
+|roleAssignmentRequests|[roleAssignmentRequest](roleassignmentrequest.md) collection| TODO: Remove this navigation.|
+|roleAssignments|[roleAssignment](roleassignment.md) collection| TODO: Remove this navigation.|
+|roleDefinitions|[roleDefinition](roledefinition.md) collection| TODO: Remove this navigation.|
 
 ### JSON representation
 

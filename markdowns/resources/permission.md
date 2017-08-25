@@ -1,14 +1,14 @@
 # permission resource type
-
+The permissions that the requestor has for the specific resource.
 
 
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|accessLevel|String||
-|isActive|Boolean||
-|isEligible|Boolean||
+|accessLevel|String|The access level. Valid values: ``None``, ``UserRead``, ``AdminRead``, and ``AdminReadWrite``.|
+|isActive|Boolean|Indicate if the the requestor has the active role for the access level.|
+|isEligible|Boolean|Indicate if the requestor has the eligible role for the access level.|
 
 ### JSON representation
 

@@ -6,29 +6,27 @@ Represents an auditing activity object that is created to track the role managem
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get activity](../api/activity_get.md) | [activity](activity.md) |Read properties and relationships of activity object.|
-|[Update](../api/activity_update.md) | [activity](activity.md)	|Update activity object. |
-|[Delete](../api/activity_delete.md) | None |Delete activity object. |
-|[My](../api/activity_my.md)|[activity](activity.md) collection||
+
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|correlationId|String||
-|createdDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|expirationDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|id|String| Read-only.|
-|operationType|String||
-|reason|String||
-|resourceId|String||
-|status|String||
+|correlationId|String|The GUID string correlating the operation that triggered the auditing activity.|
+|createdDateTime|DateTimeOffset|The time when the auditing activity is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|expirationDateTime|DateTimeOffset|This field is meaningful only if the operation is to do a role assignment or role activation. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|id|String|The id of the activity object. Read-only.|
+|operationType|String|The operation type. For example, "Create request for eligible role assignment", "Add eligible role assignment", "Refresh alert", etc. |
+|reason|String|The reason provided by the user when he activates the role assignment.|
+|resourceId|String|The Azure resource id.|
+|status|String|The status of the associated operation. The value can be "Succeeded" or "Failed".|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|originalRequestor|[subject](subject.md)| Read-only. Nullable.|
-|requestor|[subject](subject.md)| Read-only. Nullable.|
-|subject|[subject](subject.md)| Read-only. Nullable.|
-|target|[target](target.md)| Read-only. Nullable.|
+|originalRequestor|[subject](subject.md)| The original reqestor for the operation. Read-only. Nullable.|
+|requestor|[subject](subject.md)| The direct requestor. Read-only. Nullable.|
+|subject|[subject](subject.md)| The user subject that is involved in the operation. Read-only. Nullable.|
+|target|[target](target.md)| The target object involved in the operation. Read-only. Nullable.|
 
 ### JSON representation
 

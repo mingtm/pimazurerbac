@@ -1,5 +1,5 @@
 # resource resource type
-
+Represents the resource object. For Azure RBAC provider, the resource can be a subscription, a virtual machine, a SQL database, etc.
 
 
 
@@ -8,25 +8,20 @@
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get resource](../api/resource_get.md) | [resource](resource.md) |Read properties and relationships of resource object.|
-|[Create alert](../api/resource_post_alerts.md) |[alert](alert.md)| Create a new alert by posting to the alerts collection.|
-|[List alerts](../api/resource_list_alerts.md) |[alert](alert.md) collection| Get a alert object collection.|
-|[Create roleAssignment](../api/resource_post_roleassignments.md) |[roleAssignment](roleassignment.md)| Create a new roleAssignment by posting to the roleAssignments collection.|
-|[List roleAssignments](../api/resource_list_roleassignments.md) |[roleAssignment](roleassignment.md) collection| Get a roleAssignment object collection.|
-|[Create roleDefinition](../api/resource_post_roledefinitions.md) |[roleDefinition](roledefinition.md)| Create a new roleDefinition by posting to the roleDefinitions collection.|
-|[List roleDefinitions](../api/resource_list_roledefinitions.md) |[roleDefinition](roledefinition.md) collection| Get a roleDefinition object collection.|
-|[Update](../api/resource_update.md) | [resource](resource.md)	|Update resource object. |
-|[Delete](../api/resource_delete.md) | None |Delete resource object. |
-|[Permissions](../api/resource_permissions.md)|[permission](permission.md) collection||
+|[List roleAssignments](../api/resource_list_roleassignments.md) |[roleAssignment](roleassignment.md) collection| Get a roleAssignment object collection for the given resource.|
+|[List roleDefinitions](../api/resource_list_roledefinitions.md) |[roleDefinition](roledefinition.md) collection| Get a roleDefinition object collection for the given resource.|
+|[Create](../api/resource_update.md) | [resource](resource.md)	|Create resource object. For Azure RBAC provider, creating resource is not allowed.|
+|[Permissions](../api/resource_permissions.md)|[permission](permission.md) collection|Get a permission object collection for the given resource and requestor.|
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|displayName|String||
-|id|String| Read-only.|
-|originalId|String||
-|resourceType|String||
-|roleAssignmentCount|Int32||
-|roleDefinitionCount|Int32||
+|displayName|String|The resource display name.|
+|id|String| The id of the resource. This is in GUID format. Read-only.|
+|originalId|String|The original id of the resource in its provider. For example, for Azure RBAC provider, a subscription resource's original id can be /subscriptions/c14ae696-5e0c-4e5d-88cc-bef6637737ac. |
+|resourceType|String|Resource type. For example, for Azure RBAC provider, the type could be subscription, ResourceGroup, Microsoft.Sql/server, etc.|
+|roleAssignmentCount|Int32|The number of role assignments for the given resource.|
+|roleDefinitionCount|Int32|The number of role definitions for the given resource.|
 
 ### Relationships
 | Relationship | Type	|Description|

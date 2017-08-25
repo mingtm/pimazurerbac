@@ -1,24 +1,15 @@
 # providerConnection resource type
+Represents the HTTP connection to the external provider. 
 
-
-
-
-### Methods
-
-| Method		   | Return Type	|Description|
-|:---------------|:--------|:----------|
-|[Get providerConnection](../api/providerconnection_get.md) | [providerConnection](providerconnection.md) |Read properties and relationships of providerConnection object.|
-|[Update](../api/providerconnection_update.md) | [providerConnection](providerconnection.md)	|Update providerConnection object. |
-|[Delete](../api/providerconnection_delete.md) | None |Delete providerConnection object. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|content|String||
-|contentType|String||
-|headers|[KeyValue](keyvalue.md) collection||
-|httpMethod|String||
-|url|String| Read-only.|
+|content|String|The http content.|
+|contentType|String|The HTTP content type.|
+|headers|[KeyValue](keyvalue.md) collection|The HTTP headers.|
+|httpMethod|String|The HTTP method.|
+|url|String| URL for the connection. Read-only.|
 
 ### Relationships
 None

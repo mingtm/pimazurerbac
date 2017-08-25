@@ -8,6 +8,7 @@
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get roleDefinition](../api/roledefinition_get.md) | [roleDefinition](roledefinition.md) |Read properties and relationships of roleDefinition object.|
+|[Create roleDefinition](../api/resource_post_roledefinitions.md) |[roleDefinition](roledefinition.md)| Create a new roleDefinition by posting to the roleDefinitions collection.|
 |[Update](../api/roledefinition_update.md) | [roleDefinition](roledefinition.md)	|Update roleDefinition object. |
 |[Delete](../api/roledefinition_delete.md) | None |Delete roleDefinition object. |
 

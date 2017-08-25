@@ -1,5 +1,5 @@
 # policy resource type
-
+The policy defines the prerequisites that will be checked when an administrator tries to add a new role assignment or a user tries to activate his role.
 
 
 
@@ -8,28 +8,25 @@
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get policy](../api/policy_get.md) | [policy](policy.md) |Read properties and relationships of policy object.|
-|[Create roleDefinition](../api/policy_post_roledefinitions.md) |[roleDefinition](roledefinition.md)| Create a new roleDefinition by posting to the roleDefinitions collection.|
-|[List roleDefinitions](../api/policy_list_roledefinitions.md) |[roleDefinition](roledefinition.md) collection| Get a roleDefinition object collection.|
 |[Update](../api/policy_update.md) | [policy](policy.md)	|Update policy object. |
-|[Delete](../api/policy_delete.md) | None |Delete policy object. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|adminEligibleSettings|[rulesetting](rulesetting.md) collection||
-|adminMemberSettings|[rulesetting](rulesetting.md) collection||
-|default|Boolean||
-|id|String| Read-only.|
-|lastUpdated|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
-|lastUpdatedBy|String||
-|userEligibleSettings|[rulesetting](rulesetting.md) collection||
-|userMemberSettings|[rulesetting](rulesetting.md) collection||
+|adminEligibleSettings|[rulesetting](rulesetting.md) collection|The rule settings that are evaluated when an administrator tries to add an eligible role assignment.|
+|adminMemberSettings|[rulesetting](rulesetting.md) collection|The rule settings that are evaluated when an administrator tries to add a direct member role assignment.|
+|default|Boolean|Indicate if the policy is a default policy|
+|id|String| The id of the policy. Read-only.|
+|lastUpdated|DateTimeOffset|The time when the policy was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: `'2014-01-01T00:00:00Z'`|
+|lastUpdatedBy|String|The display name of the administrator who updated the policy.|
+|userEligibleSettings|[rulesetting](rulesetting.md) collection|The rule settings that are evaluated when a user tries to add an eligible role assignment. This is not used for Azure RBAC provider.|
+|userMemberSettings|[rulesetting](rulesetting.md) collection|The rule settings that are evaluated when a user tries to activate his role assignment.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|resource|[resource](resource.md)| Read-only. Nullable.|
-|roleDefinitions|[roleDefinition](roledefinition.md) collection| Read-only. Nullable.|
+|resource|[resource](resource.md)| The resource that is enforced with this policy. Read-only. Nullable.|
+|roleDefinitions|[roleDefinition](roledefinition.md) collection| The role definitions that are enforced with this policy. Read-only. Nullable.|
 
 ### JSON representation
 
