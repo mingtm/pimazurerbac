@@ -1,13 +1,13 @@
 # rulesetting resource type
 
-
+The rule setting for role assignment operation.
 
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|ruleIdentifier|String||
-|setting|String||
+|ruleIdentifier|String|The id of the rule. For example, ``ExpirationRule`` and ``MfaRule``.|
+|setting|String|The settings of the rule. The value is a JSON string with a list of pairs in the format of Parameter_Name:Parameter_Value. For example, {"permanentAssignment":false,"maximumGrantPeriodInMinutes":129600}|
 
 ### JSON representation
 

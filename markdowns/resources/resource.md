@@ -26,10 +26,10 @@ Represents the resource object. For Azure RBAC provider, the resource can be a s
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|alerts|[alert](alert.md) collection| Read-only. Nullable.|
-|parent|[resource](resource.md)| Read-only. Nullable.|
-|roleAssignments|[roleAssignment](roleassignment.md) collection| Read-only. Nullable.|
-|roleDefinitions|[roleDefinition](roledefinition.md) collection| Read-only. Nullable.|
+|alerts|[alert](alert.md) collection| The security alerts that are associated with the resource. Read-only. Nullable.|
+|parent|[resource](resource.md)| The parent resource. Read-only. Nullable.|
+|roleAssignments|[roleAssignment](roleassignment.md) collection| The collection of role assignments for the resource. Read-only. Nullable.|
+|roleDefinitions|[roleDefinition](roledefinition.md) collection| The collection of role defintions for the resource. Read-only. Nullable.|
 
 ### JSON representation
 

@@ -1,6 +1,6 @@
 # roleDefinition resource type
 
-
+Represents the role definition. For Azure RBAC provider, the role definition can be Owner, Reader, Contributor, etc.
 
 
 ### Methods
@@ -9,24 +9,23 @@
 |:---------------|:--------|:----------|
 |[Get roleDefinition](../api/roledefinition_get.md) | [roleDefinition](roledefinition.md) |Read properties and relationships of roleDefinition object.|
 |[Create roleDefinition](../api/resource_post_roledefinitions.md) |[roleDefinition](roledefinition.md)| Create a new roleDefinition by posting to the roleDefinitions collection.|
-|[Update](../api/roledefinition_update.md) | [roleDefinition](roledefinition.md)	|Update roleDefinition object. |
-|[Delete](../api/roledefinition_delete.md) | None |Delete roleDefinition object. |
+
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|activationRequiredCount|Int32||
-|assignedCount|Int32||
-|displayName|String||
-|id|String| Read-only.|
-|ruleSettings|[rulesetting](rulesetting.md) collection||
-|subjectCount|Int32||
-|templateId|String||
+|activationRequiredCount|Int32|The number of eligible role assignments associated with the role definition.|
+|assignedCount|Int32|The number of member role assignments associated with the role definition.|
+|displayName|String|The role definition display name.|
+|id|String| The id of the role definition. Read-only.|
+|ruleSettings|[rulesetting](rulesetting.md) collection|The rule settings for the role definition.|
+|subjectCount|Int32|The number of subjects that are assigned with the role.|
+|templateId|String|The role definition template id that is managed by the resource provider.|
 
 ### Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
-|resource|[resource](resource.md)| Read-only. Nullable.|
+|resource|[resource](resource.md)|The associated resource for the role definition. Read-only. Nullable.|
 
 ### JSON representation
 
