@@ -1,24 +1,14 @@
 # tenant resource type
-
-
-
-
-### Methods
-
-| Method		   | Return Type	|Description|
-|:---------------|:--------|:----------|
-|[Get tenant](../api/tenant_get.md) | [tenant](tenant.md) |Read properties and relationships of tenant object.|
-|[Update](../api/tenant_update.md) | [tenant](tenant.md)	|Update tenant object. |
-|[Delete](../api/tenant_delete.md) | None |Delete tenant object. |
+The tenant object.
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|additionalInformation|String||
-|displayName|String||
-|id|String| Read-only.|
-|initialDomainName|String||
-|status|String||
+|additionalInformation|String|The additional information of the tenant.|
+|displayName|String|The display name of the tenant.|
+|id|String| The tenant id. Read-only.|
+|initialDomainName| String|The initial domain name of the tenant.|
+|status|String|The status of the tenant. The value can be ``Unknown``, ``NotRegisteredYet``, ``RegisteredSetupInProgress``, ``RegistrationAndSetupCompleted``, ``RegistrationFailed``, ``RegistrationTimeout``, ``Disabled``, ``UnregisterStarted``, ``UnregisterInProgress``, and ``UnregisterCompleted``.|
 
 ### Relationships
 None

@@ -1,24 +1,15 @@
 # subject resource type
+The user/group subject.
 
-
-
-
-### Methods
-
-| Method		   | Return Type	|Description|
-|:---------------|:--------|:----------|
-|[Get subject](../api/subject_get.md) | [subject](subject.md) |Read properties and relationships of subject object.|
-|[Update](../api/subject_update.md) | [subject](subject.md)	|Update subject object. |
-|[Delete](../api/subject_delete.md) | None |Delete subject object. |
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|displayName|String||
-|email|String||
-|id|String| Read-only.|
-|principalName|String||
-|type|String||
+|displayName|String|Subject display name.|
+|email|String|The subject's email.|
+|id|String| The subject id. Read-only.|
+|principalName|The principal name of the subject. String||
+|type|String|The type of the subject. The value can be ``User``, ``Group``, ``ServicePrincipal``, ``GroupSecurityNotEnabled``, and ``Role``.|
 
 ### Relationships
 None

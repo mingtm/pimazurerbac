@@ -1,24 +1,14 @@
 # target resource type
-
-
-
-
-### Methods
-
-| Method		   | Return Type	|Description|
-|:---------------|:--------|:----------|
-|[Get target](../api/target_get.md) | [target](target.md) |Read properties and relationships of target object.|
-|[Update](../api/target_update.md) | [target](target.md)	|Update target object. |
-|[Delete](../api/target_delete.md) | None |Delete target object. |
+The operation target. This entity type is used for auditing purpose.
 
 ### Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|displayName|String||
-|id|String| Read-only.|
-|internalType|String||
-|objectType|String||
-|uniqueName|String||
+|displayName|String|The display name of the target.|
+|id|String| The target id. Read-only.|
+|internalType|String|The PIM internal type of the target. The value can be ``Resource``, ``RoleAssignment``, ``RoleAssignmentRequest``, and ``Subject``.|
+|objectType|String|The target object type. The value can be ``Alert``, ``Subject``, ``RoleDefintion``, ``RoleAssignment``, ``RoleAssignmentRequest``, ``Resource``, ``Tenant``, ``Request``, ``Policy``, ``Provider``, ``PolicyRoleAssociation``, ``JobRequest``, and ``AlertInfo``.|
+|uniqueName|String|The unique name of the target.|
 
 ### Relationships
 None
