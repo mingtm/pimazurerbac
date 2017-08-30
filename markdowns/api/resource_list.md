@@ -29,7 +29,7 @@ Here is an example of the request.
   "name": "get_resources"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/providers('00000000-0000-0000-0000-000000000002')/resources
+GET https://graph.microsoft.com/beta/providers('00000000-0000-0000-0000-000000000002')/resources?$orderby=displayName&$filter=((parent/id%20eq%20%279ef79d21-f590-43c7-80e4-3c6d6699b8db%27)%20and%20(resourceType%20ne%20%27subscription%27%20and%20resourceType%20ne%20%27resourcegroup%27))&$expand=parent 
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
@@ -46,13 +46,21 @@ Content-length: 247
 
 {
   "value": [
-    {
-      "id": "id-value",
-      "originalId": "originalId-value",
-      "displayName": "displayName-value",
-      "resourceType": "resourceType-value",
-      "roleDefinitionCount": 99,
-      "roleAssignmentCount": 99
+	{
+	"id":"be2a4b77-c939-4d96-a580-d030b80d3424",
+	"originalId":"/subscriptions/ce06ac4b-5d7b-4324-9196-8a4c6d2f7ffd/resourceGroups/Default-Storage-WestUS/providers/Microsoft.ClassicStorage/storageAccounts/2mportalvhdsrq97kcckvfdx",
+	"displayName":"2mportalvhdsrq97kcckvfdx",
+	"resourceType":"Microsoft.ClassicStorage/storageAccounts",
+	"roleDefinitionCount":13,
+	"roleAssignmentCount":13
+    },
+	{
+	"id":"3f299d53-17f0-4924-87b4-ccd607a5be3d",
+	"originalId":"/subscriptions/ce06ac4b-5d7b-4324-9196-8a4c6d2f7ffd/resourceGroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/accessreviews.answers.api",
+	"displayName":"accessreviews.answers.api",
+	"resourceType":"microsoft.insights/components",
+	"roleDefinitionCount":11,
+	"roleAssignmentCount":13
     }
   ]
 }

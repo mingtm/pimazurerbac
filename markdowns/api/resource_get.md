@@ -6,9 +6,7 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /resources/<id>
-GET /policies/<id>/resource
-GET /roleDefinitions/<id>/resource
+GET /resources('<id>')
 ```
 ### Optional query parameters
 This method supports the [OData Query Parameters](http://graph.microsoft.io/docs/overview/query_parameters) to help customize the response.
@@ -31,7 +29,7 @@ Here is an example of the request.
   "name": "get_resource"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/providers('00000000-0000-0000-0000-000000000002')/resources/<id>
+GET https://graph.microsoft.com/beta/providers('00000000-0000-0000-0000-000000000002')/resources('9ef79d21-f590-43c7-80e4-3c6d6699b8db')?$expand=parent
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
@@ -43,15 +41,24 @@ Here is an example of the response. Note: The response object shown here may be 
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-Content-length: 194
+Content-length: 970
 
 {
-  "id": "id-value",
-  "originalId": "originalId-value",
-  "displayName": "displayName-value",
-  "resourceType": "resourceType-value",
-  "roleDefinitionCount": 99,
-  "roleAssignmentCount": 99
+ 	"id":"9ef79d21-f590-43c7-80e4-3c6d6699b8db",
+	"originalId":"/subscriptions/ce06ac4b-5d7b-4324-9196-8a4c6d2f7ffd",
+	"displayName":"AAD Deep Dive",
+	"resourceType":"subscription",
+	"roleDefinitionCount":64,
+	"roleAssignmentCount":15,
+	"parent":{
+    "id":"9ef79d21-f590-43c7-80e4-3c6d6699b8db",
+	"originalId":"/subscriptions/ce06ac4b-5d7b-4324-9196-8a4c6d2f7ffd",
+	"displayName":"AAD Deep Dive",
+	"resourceType":null,
+	"roleDefinitionCount":0,
+	"roleAssignmentCount":0,
+	"parent":null
+  }
 }
 ```
 
