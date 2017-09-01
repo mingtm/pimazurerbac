@@ -6,10 +6,7 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /resources/<id>/permissions
-POST /policies/<id>/resource/permissions
-POST /roleDefinitions/<id>/resource/permissions
-
+GET /resources('<id>')/permissions
 ```
 ### Request headers
 | Name       | Description|
@@ -31,7 +28,7 @@ Here is an example of the request.
   "name": "resource_permissions"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/providers('00000000-0000-0000-0000-000000000002')/resources/<id>/permissions
+GET https://graph.microsoft.com/beta/providers('00000000-0000-0000-0000-000000000002')/resources('05a02078-aa1f-482a-8afa-ce1620d03099')/permissions
 ```
 
 ##### Response
@@ -50,9 +47,19 @@ Content-length: 123
 {
   "value": [
     {
-      "accessLevel": "accessLevel-value",
+      "accessLevel": "AdminRead",
       "isActive": true,
-      "isEligible": true
+      "isEligible": false
+    },
+    {
+      "accessLevel": "UserRead",
+      "isActive": true,
+      "isEligible": false
+    },
+    {
+      "accessLevel": "AdminReadWrite",
+      "isActive": true,
+      "isEligible": false
     }
   ]
 }

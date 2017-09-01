@@ -98,7 +98,7 @@ Content-length: 235
       "roleDefinition": {
         "id": "8575d82b-c7b6-4c69-8eee-1d452985a64f_18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
         "templateId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
-        "displayName": "User 1d452985a64fcess Administrator",
+        "displayName": "User Administrator",
         "subjectCount": 0,
         "1d452985a64ftivationRequiredCount": 0,
         "assignedCount": 0,

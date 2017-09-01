@@ -6,9 +6,7 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /resources/<id>/roleDefinitions
-GET /policies/<id>/resource/roleDefinitions
-GET /roleDefinitions/<id>/resource/roleDefinitions
+GET /resources('<id>')/roleDefinitions
 ```
 ### Optional query parameters
 This method supports the [OData Query Parameters](http://graph.microsoft.io/docs/overview/query_parameters) to help customize the response.
@@ -31,7 +29,7 @@ Here is an example of the request.
   "name": "get_roledefinitions"
 }-->
 ```http
-GET https://graph.microsoft.com/beta/providers('00000000-0000-0000-0000-000000000002')/resources/<id>/roleDefinitions
+GET https://graph.microsoft.com/beta/providers('00000000-0000-0000-0000-000000000002')/resources('8575d82b-c7b6-4c69-8eee-1d452985a64e')/roleDefinitions 
 ```
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
@@ -47,14 +45,25 @@ Content-type: application/json
 Content-length: 227
 
 {
+  "@odata.context": "https://api.azurerbac.mspim.azure.com/api/v1/$metadata#resources('8575d82b-c7b6-4c69-8eee-1d452985a64e')/roleDefinitions",
   "value": [
     {
-      "id": "id-value",
-      "templateId": "templateId-value",
-      "displayName": "displayName-value",
-      "subjectCount": 99,
-      "activationRequiredCount": 99,
-      "assignedCount": 99
+      "id": "8575d82b-c7b6-4c69-8eee-1d452985a64e_21d96096-b162-414a-8302-d8354f9d91b2",
+      "templateId": "21d96096-b162-414a-8302-d8354f9d91b2",
+      "displayName": "Azure Service Deploy Release Management Contributor",
+      "subjectCount": 0,
+      "activationRequiredCount": 0,
+      "assignedCount": 0,
+      "ruleSettings": [ ]
+    },
+    {
+      "id": "8575d82b-c7b6-4c69-8eee-1d452985a64e_9f15f5f5-77bd-413a-aa88-4b9c68b1e7bc",
+      "templateId": "9f15f5f5-77bd-413a-aa88-4b9c68b1e7bc",
+      "displayName": "GenevaWarmPathResourceContributor",
+      "subjectCount": 0,
+      "activationRequiredCount": 0,
+      "assignedCount": 0,
+      "ruleSettings": [ ]
     }
   ]
 }
