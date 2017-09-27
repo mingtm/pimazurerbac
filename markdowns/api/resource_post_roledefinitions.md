@@ -6,10 +6,8 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /resources/<id>/roleDefinitions
-POST /policies/<id>/resource/roleDefinitions
-POST /roleDefinitions/<id>/resource/roleDefinitions
-
+POST /providers/<id>/resources/<id>/roleDefinitions
+POST /providers/<id>/roleDefinitions
 ```
 ### Request headers
 | Name       | Description|

@@ -6,9 +6,7 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /roleAssignmentRequests/<id>/cancel
 POST /providers/<id>/roleAssignmentRequests/<id>/cancel
-
 ```
 ### Request headers
 | Name       | Description|
@@ -30,7 +28,7 @@ Here is an example of the request.
   "name": "roleassignmentrequest_cancel"
 }-->
 ```http
-POST https://graph.microsoft.com/beta/providers('00000000-0000-0000-0000-000000000002')/roleAssignmentRequests/<id>/cancel
+POST https://graph.microsoft.com/beta/providers('00000000-0000-0000-0000-000000000002')/roleAssignmentRequests('bc6f10e6-6dd9-4393-853e-09e13c036b17_7fd64851-3279-459b-b614-e2b2ba760f5b_7c53453e-d5a4-41e0-8eb1-32d5ec8bfdee')/cancel
 ```
 
 ##### Response
@@ -41,7 +39,7 @@ Here is an example of the response.
   "@odata.type": "microsoft.graph.None"
 } -->
 ```http
-HTTP/1.1 200 OK
+HTTP/1.1 204 No Content
 ```
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
