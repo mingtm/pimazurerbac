@@ -84,8 +84,8 @@ Content-length: 279
                 "id": "795ed4a8-e4e5-48f5-b60c-ee9845a7a793",
                 "displayName": "alpha",
                 "type": "User",
-                "principalName": "mingt@ntdev.microsoft.com",
-                "email": "mingt@microsoft.com"
+                "principalName": "alpha@microsoft.com",
+                "email": "alpha@microsoft.com"
             },
             "roleDefinition@odata.context": "https://api.azrbac.mspim.azure.com/api/v1/$metadata#roleAssignmentRequests('bc6f10e6-6dd9-4393-853e-09e13c036b17_7fd64851-3279-459b-b614-e2b2ba760f5b_7c53453e-d5a4-41e0-8eb1-32d5ec8bfdee')/roleDefinition/$entity",
             "roleDefinition": {
