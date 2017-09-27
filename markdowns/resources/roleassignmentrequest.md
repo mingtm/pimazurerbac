@@ -6,7 +6,7 @@ Represents the request of role assignment operation. The request can be a new ro
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[List roleAssignmentRequests](../api/roleassignmentrequest_list.md) | [roleAssignmentRequest collection](roleassignmentrequest.md) |Get roleAssignmentRequest collection.|
-|[Create](../api/roleassignmentrequest_update.md) | [roleAssignmentRequest](roleassignmentrequest.md)	|Create roleAssignmentRequest object. |
+|[Create](../api/roleassignmentrequest_post.md) | [roleAssignmentRequest](roleassignmentrequest.md)	|Create roleAssignmentRequest object. |
 |[Cancel](../api/roleassignmentrequest_cancel.md)|[roleAssignmentRequest](roleassignmentrequest.md)|Cancel a pending role assignment request.|
 
 ### Properties
