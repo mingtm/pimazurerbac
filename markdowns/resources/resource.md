@@ -7,10 +7,11 @@ Represents the resource object. For Azure RBAC provider, the resource can be a s
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
+|[List resources](../api/resource_list.md) | [resource](resource.md) |List resource collection.|
 |[Get resource](../api/resource_get.md) | [resource](resource.md) |Read properties and relationships of resource object.|
+|[Create](../api/resource_update.md) | [resource](resource.md)	|Create resource object. For Azure RBAC provider, creating resource is not allowed.|
 |[List roleAssignments](../api/resource_list_roleassignments.md) |[roleAssignment](roleassignment.md) collection| Get a roleAssignment object collection for the given resource.|
 |[List roleDefinitions](../api/resource_list_roledefinitions.md) |[roleDefinition](roledefinition.md) collection| Get a roleDefinition object collection for the given resource.|
-|[Create](../api/resource_update.md) | [resource](resource.md)	|Create resource object. For Azure RBAC provider, creating resource is not allowed.|
 |[Permissions](../api/resource_permissions.md)|[permission](permission.md) collection|Get a permission object collection for the given resource and requestor.|
 
 ### Properties

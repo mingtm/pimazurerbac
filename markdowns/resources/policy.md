@@ -7,6 +7,7 @@ The policy defines the prerequisites that will be checked when an administrator 
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
+|[List policy](../api/policy_list.md) | [policy](policy.md) |List policy objects.|
 |[Get policy](../api/policy_get.md) | [policy](policy.md) |Read properties and relationships of policy object.|
 |[Update](../api/policy_update.md) | [policy](policy.md)	|Update policy object. |
 

@@ -7,6 +7,7 @@ Represents the role definition. For Azure RBAC provider, the role definition can
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
+|[List roleDefinitions](../api/roledefinition_list.md) | [roleDefinition](roledefinition.md) |Get roleDefinition collection.|
 |[Get roleDefinition](../api/roledefinition_get.md) | [roleDefinition](roledefinition.md) |Read properties and relationships of roleDefinition object.|
 |[Create roleDefinition](../api/resource_post_roledefinitions.md) |[roleDefinition](roledefinition.md)| Create a new roleDefinition by posting to the roleDefinitions collection.|
 

@@ -6,7 +6,7 @@ Represents a security alert that could be a security weakness of the current sys
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get alert](../api/alert_get.md) | [alert](alert.md) |Read properties and relationships of alert object.|
-|[List alerts](../api/resource_list_alerts.md) |[alert](alert.md) collection| Get a alert object collection.|
+|[List alerts](../api/resource_list_alerts.md) |[alert](alert.md) collection| Get a collection of alert objects.|
 |[Deactivate](../api/alert_deactivate.md)|None|Deactivate an alert.|
 |[Disable](../api/alert_disable.md)|None|Disable an alert.|
 |[Enable](../api/alert_enable.md)|None|Enable an alert.|

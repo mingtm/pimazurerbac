@@ -6,10 +6,7 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /alerts/<id>/deactivate
-POST /providers/<id>/alerts/<id>/deactivate
 POST /resources/<id>/alerts/<id>/deactivate
-
 ```
 ### Request headers
 | Name       | Description|

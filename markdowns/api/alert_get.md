@@ -6,8 +6,6 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /alerts/<id>
-GET /providers/<id>/alerts/<id>
 GET /resources/<id>/alerts/<id>
 ```
 ### Optional query parameters

@@ -6,8 +6,6 @@ The following **scopes** are required to execute this API:
 ### HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /alerts/<id>/fix
-POST /providers/<id>/alerts/<id>/fix
 POST /resources/<id>/alerts/<id>/fix
 
 ```

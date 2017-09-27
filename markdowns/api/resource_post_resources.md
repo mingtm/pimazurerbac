@@ -7,7 +7,6 @@ The following **scopes** are required to execute this API:
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /resources
-
 ```
 ### Request headers
 | Name       | Description|

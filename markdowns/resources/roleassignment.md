@@ -5,6 +5,7 @@ Represents a role assignment that is assigned to a principal for a resource.
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
+|[List roleAssignments](../api/roleassignment_list.md) | [roleAssignment](roleassignment.md) |List roleAssignment collection.|
 |[Get roleAssignment](../api/roleassignment_get.md) | [roleAssignment](roleassignment.md) |Read properties and relationships of roleAssignment object.|
 
 ### Properties
