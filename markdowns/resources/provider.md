@@ -8,7 +8,6 @@ Represents the resource provider that is managed by Privileged Identity Manageme
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
 |[Get provider](../api/provider_get.md) | [provider](provider.md) |Read properties and relationships of provider object.|
-|[Create provider](../api/provider_update.md) | [provider](provider.md)	|Create a new provider. |
 
 ### Properties
 | Property	   | Type	|Description|
