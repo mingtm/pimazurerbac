@@ -48,11 +48,7 @@ Content-length: 272
   "value": [
     {
       "id": "id-value",
-      "displayName": "displayName-value",
-      "ownerTemplateId": "ownerTemplateId-value",
-      "readerTemplateId": "readerTemplateId-value",
-      "requiresResourceProvisioning": true,
-      "isMultiTenant": true
+      "displayName": "displayName-value"
     }
   ]
 }
